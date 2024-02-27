@@ -1,0 +1,20 @@
+{% extends 'customers/main.html' %}
+
+{% block content %}
+
+{% for man in all_customers %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{man.name}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{man.investment}}</li>
+      <li class="list-group-item">{{man.return_premium}}</li>
+      <li class="list-group-item">{{man.premium_day}}</li>
+      <li class="list-group-item">{{man.created_date}}</li>
+    </ul>
+    
+  </div>
+{% endfor %}
+
+{% endblock content %}

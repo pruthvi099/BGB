@@ -1,0 +1,19 @@
+{% extends 'customers/main.html' %}
+
+{% block content %}
+
+{% for prem in all_premiums %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{prem.customerName}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{prem.amount}}</li>
+      <li class="list-group-item">{{prem.is_paid}}</li>
+      <li class="list-group-item">{{prem.paid_date}}</li>
+    </ul>
+    
+  </div>
+{% endfor %}
+
+{% endblock content %}
